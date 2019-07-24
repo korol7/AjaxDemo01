@@ -105,3 +105,5 @@ def server06_view(request):
         msg += "%s_%s_%s_%s_%s|"%(u.id,u.uname,u.upwd,u.uemail,u.nickname)
         msg = msg[0:-1]
     return HttpResponse(msg)
+def test_view(request):
+    pass
