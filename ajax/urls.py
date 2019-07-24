@@ -22,4 +22,7 @@ urlpatterns=[
     url(r'^05-ajax-post/$',views.post_view),
     url(r"^05-server/$",views.server05_view),
 
+#     06使用ＡＪＡＸ读取数据
+    url(r'^06-server',views.server06_view),
+
 ]

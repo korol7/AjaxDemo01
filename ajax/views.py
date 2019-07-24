@@ -95,3 +95,10 @@ def regpost_view(request):
         print(e)
         return HttpResponse("0")
 
+def users_view(request):
+    return render(request,'06-ajax-users.html')
+
+def server06_view(request):
+    users = User.objects.all()
+
+    pass
