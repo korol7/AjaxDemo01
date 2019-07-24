@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+    <script src="/static/jquery-1.11.3.js"></script>
+    <script >
+        $(function() {
+           $("#btnJSON").click(function() {
+                //1.模拟一个JSON字符串
+                var filght = '{"filghtNO":"NH980","from":"PEK","TO":"KIX","time":"14:20"}';
+
+                //2.通过JSON.parse()将JSON转换成JS对象
+                var obj = JSON.parse(filght);
+                console.log(obj);
+                //3.解析对象
+                // console.log("航班号:"+obj.filghtNO);
+                console.log("出发:"+obj.time);
+
+
+                $("#btnJSONArr").click(function() {
+                    var str = '[{"filghtNO":"NH980","from":"PEK","TO":"KIX","time":"14:20"},{"filghtNO":"NH980","from":"PEK","TO":"KIX","time":"9:20"}]';
+                    var arr = JSON.parse(str)
+                    //jquery自带循环
+                    //转换成jquery数组
+                    $(arr).each(function(i,obj) {
+                        console.log("下标为"+i+"的元素");
+                        console.log("出发："+obj.time);
+                        console.log("去："+obj.from);
+                        // console.log("去："+obj.filghtNO);
+                    })
+                })
+           });
+        });
+</script>
+</head>
+<body>
+    <button id="btnJSON">JSON串->JS对象</button>
+    <button id="btnJSONArr">JSON串->数组</button>
+
+</body>
+</html>

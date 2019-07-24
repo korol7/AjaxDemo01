@@ -24,5 +24,7 @@ urlpatterns=[
 
 #     06使用ＡＪＡＸ读取数据
     url(r'^06-server',views.server06_view),
+#     在前端中处理JSON格式字符串
+    url("^07-json/$",views.json_view),
 
 ]
